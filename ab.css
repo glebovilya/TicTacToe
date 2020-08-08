@@ -1,0 +1,66 @@
+.cell{
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    background: white;
+    padding: 0;
+    transition: all 0.2s ease-out;
+}
+.cell:hover {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    cursor: pointer;
+}
+.container{
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 2px 2px;
+}
+.red{
+background: red;
+}
+.green{
+  background: green;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+.restart{
+  margin-top: 5px;
+  background: magenta;
+  color: greenyellow;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: 700;
+  animation-fill-mode: both;
+}
+.restart:hover{
+  animation-duration: 1000ms;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  0% {
+    transform: scale(0.95);
+    background: magenta;
+  }
+  50% {
+    background: rgb(65, 231, 195);
+  }
+
+  100% {
+    transform: scale(1.05);
+    background: magenta;
+  }
+}
+.text{
+  text-transform: uppercase;
+  color: magenta;
+}
